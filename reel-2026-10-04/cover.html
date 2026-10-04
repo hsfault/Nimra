@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reel Cover</title>
+<style>
+@font-face{font-family:Playfair;font-weight:800;font-style:normal;src:url(node_modules/@fontsource/playfair-display/files/playfair-display-latin-800-normal.woff2) format('woff2')}
+@font-face{font-family:Playfair;font-weight:800;font-style:italic;src:url(node_modules/@fontsource/playfair-display/files/playfair-display-latin-800-italic.woff2) format('woff2')}
+@font-face{font-family:Cinzel;font-weight:700;src:url(node_modules/@fontsource/cinzel/files/cinzel-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:500;src:url(node_modules/@fontsource/poppins/files/poppins-latin-500-normal.woff2) format('woff2')}
+:root{--cream:#F7F3EC;--maroon:#63080F;--green:#043417}
+html,body{margin:0;background:var(--cream)}
+#c{position:relative;width:1080px;height:1920px;overflow:hidden;background:
+  radial-gradient(1100px 900px at 50% 38%, rgba(255,255,255,.6), rgba(255,255,255,0) 70%),
+  radial-gradient(ellipse 95% 80% at 50% 50%, rgba(0,0,0,0) 62%, rgba(99,8,15,.08) 100%), var(--cream)}
+.abs{position:absolute}
+#grid{inset:0;background-image:radial-gradient(rgba(4,52,23,.16) 1.7px, transparent 2px);background-size:54px 54px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 50%, rgba(0,0,0,0) 25%, #000 85%);opacity:.55}
+#bug{left:0;width:1080px;top:318px;display:flex;justify-content:center;align-items:center;gap:18px}
+#bug img{width:78px}
+#bug .n{font-family:Cinzel;font-weight:700;font-size:28px;letter-spacing:.18em;color:var(--maroon)}
+#bug .n b{color:var(--green)}
+#bug .r{font-family:Poppins;font-weight:500;font-size:19px;letter-spacing:.24em;color:var(--green);text-transform:uppercase}
+.t{left:0;width:1080px;text-align:center;font-family:Playfair;font-weight:800;line-height:1;white-space:nowrap}
+#halo{left:130px;top:1000px;width:820px;height:820px}
+#nimra{left:160px;top:1050px;width:760px}
+.dia{width:22px;height:22px;background:var(--maroon);transform:rotate(45deg)}
+</style>
+</head>
+<body>
+<div id="c">
+  <div id="grid" class="abs"></div>
+  <div id="bug" class="abs"><img src="assets/logo_mark.png" alt=""><div><div class="n">NIMRA <b>AKBAR</b></div><div class="r">AI Automated Marketer</div></div></div>
+  <div class="t abs" style="top:440px;font-size:168px;color:var(--green)">Founders</div>
+  <div class="t abs" style="top:618px;font-size:112px;color:var(--green)">run</div>
+  <div class="t abs" style="top:730px;font-size:236px;color:var(--maroon);font-style:italic">errands.</div>
+  <svg class="abs" style="left:230px;top:968px" width="620" height="60" viewBox="0 0 580 60"><path d="M8 38 C 120 14, 260 12, 330 26 S 500 46, 572 18" fill="none" stroke="#043417" stroke-width="9" stroke-linecap="round"/></svg>
+  <svg id="halo" class="abs" viewBox="0 0 820 820">
+    <path d="M410 30 A380 380 0 0 0 52 540" fill="none" stroke="#043417" stroke-width="7" stroke-linecap="round"/>
+    <path d="M150 690 A380 380 0 0 0 760 560" fill="none" stroke="#63080F" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="790" cy="410" r="9" fill="#63080F"/>
+  </svg>
+  <img id="nimra" class="abs" src="assets/model_hd.png" alt="">
+</div>
+<script>
+Promise.all([document.fonts.load('800 100px Playfair'), document.fonts.load('italic 800 100px Playfair'), document.fonts.load('700 20px Cinzel'), document.fonts.load('500 20px Poppins'),
+  ...[...document.images].map(i => i.decode())]).then(() => { window.ready = true; });
+</script>
+</body>
+</html>
