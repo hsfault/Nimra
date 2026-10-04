@@ -14,5 +14,5 @@ ffmpeg -y -hide_banner -loglevel warning \
   -c:v libx264 -preset slow -crf 16 -profile:v high -pix_fmt yuv420p -tune film \
   -c:a aac -b:a 320k -movflags +faststart -shortest \
   out/Nimra_Reel_2026-10-04_Founders_Run_Errands.mp4
-ffmpeg -y -hide_banner -loglevel warning -i build/cover.png -q:v 2 out/Nimra_Reel_2026-10-04_Cover.jpg
+ffmpeg -y -hide_banner -loglevel warning -i build/cover.png -update 1 -frames:v 1 -q:v 2 out/Nimra_Reel_2026-10-04_Cover.jpg
 echo "done -> out/"
